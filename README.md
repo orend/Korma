@@ -17,7 +17,7 @@ Simply add Korma as a dependency to your lein project:
 Note: korma depends on version 0.3.7 of jdbc, so if you have another dependency that requires a different version (like the migrations library [lobos](https://github.com/budu/lobos)), be sure to specify:
 
 ```clojure
-[org.clojure/java.jdbc "0.3.7"]
+[org.clojure/java.jdbc "0.6.1"]
 ```
 ## Docs and Real Usage
 
@@ -68,7 +68,7 @@ And include log4j in your project.clj:
   (where {:username "chris"}))
 ;; executes: SELECT * FROM users WHERE (users.username = 'chris')
 
-(select users 
+(select users
   (where {:active true})
   (order :created)
   (limit 5)
